@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using System;
 
 public class Control_Enemy : Character {
 
@@ -63,7 +64,7 @@ public class Control_Enemy : Character {
 	}
 
     public override void TakeDamage(float damage,Transform myTarget,bool playerAttack)
-    {
+    { 
         if (playerAttack && (enemyInterface is DefaultState))
         {
             this.MyTarget = myTarget;
@@ -82,5 +83,11 @@ public class Control_Enemy : Character {
 
         enemyInterface = newState;
         enemyInterface.OnEnter(this);
+    }
+
+    public override void Death()
+    {
+        Instantiate(MaterialManager.Instance.InstantiateMaterial(), transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }
