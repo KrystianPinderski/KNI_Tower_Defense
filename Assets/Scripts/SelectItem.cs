@@ -13,6 +13,13 @@ public class SelectItem : MonoBehaviour
 
     void Update()
     {
+        //Tutaj sprawdzamy czy stać nas na budowanie wieży czy mamy wystarczająco dużo surowców ,jeśli nie to slot jest niedostępny 
+        //i aktywuje się wtedy gdy mamy odpowiednio dużo surowców 
+
+        foreach(Slot_Inv tmp in slots)
+        {
+           
+        }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {

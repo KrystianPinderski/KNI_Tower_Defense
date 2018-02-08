@@ -236,8 +236,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a23b875aa4ba5847b6c5203ae35724e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameItem: TOWER WATER
+  gold: 2
+  silver: 3
+  bronze: 1
+  money: 0
   bulidTime: 3
-  MyRange: {fileID: 114292855475141410}
+  myRange: {fileID: 114292855475141410}
 --- !u!208 &208130669051658764
 NavMeshObstacle:
   m_ObjectHideFlags: 1

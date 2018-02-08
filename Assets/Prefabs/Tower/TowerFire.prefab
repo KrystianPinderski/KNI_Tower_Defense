@@ -225,8 +225,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a23b875aa4ba5847b6c5203ae35724e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameItem: TOWER FIRE
+  gold: 5
+  silver: 0
+  bronze: 1
+  money: 2
   bulidTime: 1
-  MyRange: {fileID: 114146777270979606}
+  myRange: {fileID: 114146777270979606}
 --- !u!114 &114605270764745072
 MonoBehaviour:
   m_ObjectHideFlags: 1

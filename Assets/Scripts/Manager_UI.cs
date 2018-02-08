@@ -31,7 +31,7 @@ public class Manager_UI : MonoBehaviour{//, IPointerEnterHandler {
 
 		if (Input.GetKeyDown (KeyCode.I)) 
 		{
-			Metod_Active_Menu ();
+                Metod_Active_Menu();
 		}
 
 
