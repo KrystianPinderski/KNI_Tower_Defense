@@ -1,24 +1,27 @@
 fileFormatVersion: 2
-guid: d6619063b42ce6a4fbaba72facf59d5b
-timeCreated: 1517822824
+guid: f9ee9217346d302408ac9f1862a8779d
+timeCreated: 1518086723
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Plane
-    100004: Plane_001
-    400000: //RootNode
-    400002: Plane
-    400004: Plane_001
-    2300000: Plane
-    2300002: Plane_001
-    3300000: Plane
-    3300002: Plane_001
-    4300000: Plane
-    4300002: Plane_001
-    7400000: Default Take
-    9500000: //RootNode
+    100000: Cannon_2
+    100002: Cannon_platform
+    100004: Tower
+    100006: //RootNode
+    400000: Cannon_2
+    400002: Cannon_platform
+    400004: Tower
+    400006: //RootNode
+    2300000: Cannon_2
+    2300002: Cannon_platform
+    2300004: Tower
+    3300000: Cannon_2
+    3300002: Cannon_platform
+    3300004: Tower
+    4300000: Cannon_2
+    4300002: Cannon_platform
+    4300004: Tower
   materials:
     importMaterials: 1
     materialName: 0
@@ -88,7 +91,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

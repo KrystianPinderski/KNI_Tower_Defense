@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using System.Collections.Generic;
 
 public class BuildSystem : MonoBehaviour
 {
@@ -60,6 +61,14 @@ public class BuildSystem : MonoBehaviour
     {
         if (buildModel != null)
         {
+            List<Renderer> rend = new List<Renderer>();
+            for (int i = 0; i < buildModel.transform.childCount; i++)
+            {
+                if (buildModel.transform.GetChild(i).GetComponent<Renderer>() != null)
+                    rend.Add(buildModel.transform.GetChild(i).GetComponent<Renderer>());
+            }
+
+
             RaycastHit hit;
             Vector3 centerPosition = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0f));
             Debug.DrawRay(centerPosition, fpsCam.transform.forward * hitRange, Color.red);
@@ -68,13 +77,26 @@ public class BuildSystem : MonoBehaviour
             {
                 if (hit.collider.name == "Terrain")
                 {
-                    buildModel.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
+                    for (int i = 0; i < rend.Count; i++)
+                        rend[i].enabled = true;
                     buildModel.transform.position = hit.point;
                 }
-                else buildModel.transform.GetChild(0).GetComponent<Renderer>().enabled = false; 
+                else
+                {
+                    for (int i = 0; i < rend.Count; i++)
+                        rend[i].enabled = false;
+                   
+                }
+
 
             }
-            else buildModel.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
+            else
+            {
+                for (int i = 0; i < rend.Count; i++)
+                    rend[i].enabled = false;
+               
+            }
+           
 
         }
         if (Input.GetMouseButtonDown(0) && canShoot)
