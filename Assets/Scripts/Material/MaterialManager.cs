@@ -93,16 +93,24 @@ public class MaterialManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-     value_Gold=0;
-     value_Silver=0;
-     value_Bronze=0;
-     value_Money = 0;
+     Value_Gold=100;
+     Value_Silver=100;
+     Value_Bronze=100;
+     Value_Money = 100;
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    public void GetMaterial(Tower tmp)
+    {
+        Value_Gold -= tmp.Gold;
+        Value_Silver -= tmp.Silver;
+        Value_Bronze -= tmp.Bronze;
+        Value_Money -= tmp.Money;
+    }
 
     public void AddMaterial(Material material)
     {
@@ -124,6 +132,14 @@ public class MaterialManager : MonoBehaviour {
             }
     }
 
+    public bool HaveMaterials(GameObject tmp)
+    {
+        Tower tower = tmp.GetComponent<Tower>();
+        return tower.Gold <= Value_Gold
+        && tower.Silver <= Value_Silver
+        && tower.Bronze <= Value_Bronze
+        && tower.Money <= Value_Money;
+    }
 
     public GameObject InstantiateMaterial()
     {

@@ -40,7 +40,7 @@ public class BuildItem : Item
     {
         string information = string.Empty;
         Tower tower = prafabToBuild.transform.GetChild(0).GetComponent<Tower>();
-        information= string.Format("<size=14>{0}\n</size><size=12><color=green>MONEY: {1}$</color>\n<color=yellow>GOLD:{2}</color>\n<color=silver>SILVER: {2}</color>\n<color=brown>BRONZE: {3}</color>\n<color=red>DAMAGE: {4}</color></size>", tower.NameItem, tower.Money, tower.Gold, tower.Silver, tower.Bronze, tower.MyRange.Damge);
+        information= string.Format("<size=14>{0}\n</size><size=12><color=green>MONEY: {1}$</color>\n<color=yellow>GOLD: {2}</color>\n<color=silver>SILVER: {3}</color>\n<color=brown>BRONZE: {4}</color>\n<color=red>DAMAGE: {5}</color></size>", tower.NameItem, tower.Money, tower.Gold, tower.Silver, tower.Bronze, tower.MyRange.Damge);
         return information;
     }
 

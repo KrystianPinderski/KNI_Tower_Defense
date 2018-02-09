@@ -18,9 +18,8 @@ public class BuildSystem : MonoBehaviour
             return instance;
         }
     }
+
     Player p;
-
-
 
    [SerializeField]
     private GameObject Bar;
@@ -38,8 +37,19 @@ public class BuildSystem : MonoBehaviour
     private int countTower = 0;
     private bool canShoot=true;
 
-    
-    
+    public bool CanShoot
+    {
+        get
+        {
+            return canShoot;
+        }
+
+        set
+        {
+            canShoot = value;
+        }
+    }
+
 
     public Coroutine startCreateTower;
 
@@ -77,26 +87,30 @@ public class BuildSystem : MonoBehaviour
             else buildModel.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
 
         }
-        if (Input.GetMouseButtonDown(0) && canShoot)
+        if (Input.GetMouseButtonDown(0) && CanShoot)
         {
             RaycastHit hit;
             Vector3 centerPosition = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0f));
             Debug.DrawRay(centerPosition, fpsCam.transform.forward * hitRange, Color.red);
           
             if(buildPrefab!=null)
-                if (Physics.Raycast(centerPosition, fpsCam.transform.forward, out hit, hitRange))
+                if (Physics.Raycast(centerPosition, fpsCam.transform.forward, out hit, hitRange) && CanShoot)
                 {
                     
-                    if (hit.collider.name == "Terrain")
+                    if (hit.collider.name == "Terrain" && MaterialManager.Instance.HaveMaterials(buildPrefab.transform.GetChild(0).gameObject))
                     {
+                        
                         countTower++;
                      
                         GameObject tmp = (GameObject)Instantiate(buildPrefab, hit.point, Quaternion.identity);
                         Tower tmp_Tower = tmp.transform.GetChild(0).GetComponent<Tower>();
+
+                        MaterialManager.Instance.GetMaterial(tmp_Tower);
+
                         tmp_Tower.WeightTower = countTower;
                         startCreateTower = StartCoroutine(CreateObject(tmp_Tower));
-                        //navMeshSurface.RemoveData();
-                        //navMeshSurface.BuildNavMesh();
+                        buildModel = null;
+                      
                     }
                 }
 
@@ -104,12 +118,11 @@ public class BuildSystem : MonoBehaviour
         }
     }
 
-
     IEnumerator CreateObject(Tower tmp_Tower)
     {
         
         p.StopPlayerMove(true);
-        canShoot = false;
+        CanShoot = false;
         sights.SetActive(false);
         Bar.SetActive(true);
         float rate = 1 / tmp_Tower.BulidTime;
@@ -123,7 +136,7 @@ public class BuildSystem : MonoBehaviour
         }
         p.StopPlayerMove(false);
         Bar.SetActive(false);
-        canShoot = true;
+        CanShoot = true;
         sights.SetActive(true);
     }
 

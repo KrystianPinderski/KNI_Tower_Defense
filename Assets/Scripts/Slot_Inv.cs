@@ -36,7 +36,7 @@ public class Slot_Inv :MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        if(item!=null)
+        if(item!=null && transform.tag!="UIFastBarSlot")
             InfoItem.Instnace.SetInfoPanel(true,item.GetInfo());
     }
 

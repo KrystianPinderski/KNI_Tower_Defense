@@ -44,6 +44,7 @@ public class UIDragger : MonoBehaviour
             {
                 
                 objectToDrop.GetComponent<Slot_Inv>().addItem(ItemHolderScript.getItem()) ;
+                
             }
            
             ItemHolderScript.Clear();
