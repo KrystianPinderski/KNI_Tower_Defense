@@ -35,8 +35,10 @@ public abstract class Character : MonoBehaviour {
         
         if (HealthBar.CurrentHealth<=0)
         {
-            Destroy(this.gameObject);
+            Death();
             
         }
     }
+
+    public abstract void Death();
 }

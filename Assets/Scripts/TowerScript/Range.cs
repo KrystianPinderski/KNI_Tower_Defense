@@ -30,6 +30,13 @@ public class Range : MonoBehaviour {
     private GameObject scathe;
     [SerializeField]
     private float damge;
+    public float Damge
+    {
+        get
+        {
+            return damge;
+        }
+    }
 
 	// Use this for initialization
 	void Start () {

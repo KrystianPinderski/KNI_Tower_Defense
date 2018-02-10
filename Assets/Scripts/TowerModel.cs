@@ -6,6 +6,7 @@ public class TowerModel : MonoBehaviour
 {
 
     bool build = false;
+
     List<Renderer> rend = new List<Renderer>();
     public void Start()
     {
@@ -15,6 +16,25 @@ public class TowerModel : MonoBehaviour
                 rend.Add(transform.GetChild(i).GetComponent<Renderer>());
         }
     }
+
+
+    public void Update()
+    {
+		if(rend.Count>0){
+			
+			if (rend[0].material.color== new Color32(158, 23, 0, 130))
+			{
+				BuildSystem.Instance.CanShoot = false;
+			}
+			else
+			{
+				BuildSystem.Instance.CanShoot = true;
+			}
+		}
+       
+    }
+  
+
     public void OnTriggerEnter(Collider other)
     {
         for(int i=0;i<rend.Count;i++)

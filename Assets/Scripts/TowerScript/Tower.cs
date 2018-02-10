@@ -5,6 +5,58 @@ using UnityEngine;
 public abstract class Tower : MonoBehaviour {
 
     [SerializeField]
+    private string nameItem;
+    public string NameItem
+    {
+        get
+        {
+            return nameItem;
+        }
+    }
+
+    [SerializeField]
+    private float gold;
+    public float  Gold
+    {
+        get
+        {
+            return gold;
+        }
+    }
+
+    [SerializeField]
+    private float silver;
+    public float Silver
+    {
+        get
+        {
+            return silver;
+        }
+    }
+
+    [SerializeField]
+    private float bronze;
+    public float Bronze
+    {
+        get
+        {
+            return bronze;
+        }
+    }
+
+    [SerializeField]
+    private float money;
+    public float Money
+    {
+        get
+        {
+            return money;
+        }
+    }
+
+
+
+    [SerializeField]
     private float bulidTime;
     public float BulidTime
     {
@@ -18,7 +70,6 @@ public abstract class Tower : MonoBehaviour {
             bulidTime = value;
         }
     }
-
 
     private int weightTower;
     public int WeightTower
@@ -47,8 +98,15 @@ public abstract class Tower : MonoBehaviour {
     }
 
     [SerializeField]
-    private Range MyRange;
-    
+    private Range myRange;
+    public Range MyRange
+    {
+        get
+        {
+            return myRange;
+        }
+    }
+
 
 
     // Use this for initialization

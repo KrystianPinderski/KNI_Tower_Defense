@@ -368,6 +368,26 @@ MonoBehaviour:
   scathe: {fileID: 1033158764453320, guid: 062c68df0be7e1f4fba09c5b41d5d23a, type: 2}
   damge: 10
 --- !u!114 &114651412167473218
+
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1742579869107298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a23b875aa4ba5847b6c5203ae35724e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameItem: TOWER FIRE
+  gold: 5
+  silver: 0
+  bronze: 1
+  money: 2
+  bulidTime: 1
+  myRange: {fileID: 114146777270979606}
+--- !u!114 &114605270764745072
+>>>>>>> f62727395a29fc444b893385e32370fbc230b3b0
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
