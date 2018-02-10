@@ -20,6 +20,12 @@ public class Item : ScriptableObject
     {
         Debug.Log("UnUse object: " + name);
     }
+
+    //Dodana funckja
+    virtual public  string GetInfo()
+    {
+        return null;
+    }
 }
 
 	

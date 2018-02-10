@@ -5,6 +5,18 @@ public class TowerModel : MonoBehaviour
 {
 
     bool build = false;
+
+    public void Update()
+    {
+        if (GetComponent<Renderer>().material.color== new Color32(158, 23, 0, 130))
+        {
+            BuildSystem.Instance.CanShoot = false;
+        }
+        else
+        {
+            BuildSystem.Instance.CanShoot = true;
+        }
+    }
   
     public void OnTriggerEnter(Collider other)
     {
