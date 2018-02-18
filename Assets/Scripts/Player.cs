@@ -23,7 +23,7 @@ public class Player : Character {
 
 
     public float RangeShoot;
-    public float Damage;
+    public float Damage = 50f;
     public float timeShoot;
 
     CharacterController characterController;
@@ -40,7 +40,7 @@ public class Player : Character {
     float yRotCounter;
 
     public Camera camera;
-    private float hitRange;
+   // private float hitRange;
 
     public Transform nexus;
 
@@ -111,7 +111,7 @@ public class Player : Character {
         //timeShoot += Time.deltaTime *  4;
         if (Input.GetMouseButton(1))
         {
-            Shoot();
+            //Shoot();
            // timeShoot = 0f;
         }
 
@@ -166,20 +166,20 @@ public class Player : Character {
         base.TakeDamage(damage,null,false);
     }
 
-    public void Shoot()
-    {
-       
-        RaycastHit hit;
-        if(Physics.Raycast(camera.transform.position,camera.transform.forward,out hit,RangeShoot))
-        {
-            if(hit.transform.tag=="Enemy")
-            {
-                Control_Enemy enemy = hit.transform.GetComponent<Control_Enemy>();
-                enemy.TakeDamage(Damage, this.transform, true);
-            }
-        }
+    /* public void Shoot()
+     {
 
-    }
+         RaycastHit hit;
+         if(Physics.Raycast(camera.transform.position,camera.transform.forward,out hit,RangeShoot))
+         {
+             if(hit.transform.tag=="Enemy")
+             {
+                 Control_Enemy enemy = hit.transform.GetComponent<Control_Enemy>();
+                 enemy.TakeDamage(Damage, this.transform, true);
+             }
+         }
+
+     }*/
 
 
     public override void Death()
