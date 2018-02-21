@@ -29,6 +29,16 @@ public class InfoItem : MonoBehaviour {
     [SerializeField]
     private Text textable;
 
+
+    [SerializeField]
+    private GameObject infoImage2;
+
+    [SerializeField]
+    private Text textsize2;
+
+    [SerializeField]
+    private Text textable2;
+
     // Use this for initialization
     void Start () {
 		
@@ -57,6 +67,22 @@ public class InfoItem : MonoBehaviour {
          infoImage.SetActive(tmp);
     }
 
-    
-    
+    public void SetInfoPanel2(bool tmp, string information)
+    {
+        if (true)
+        {
+            textsize2.text = information;
+            textable2.text = information;
+        }
+        else
+        {
+            textsize2.text = string.Empty;
+            textable2.text = string.Empty;
+        }
+        infoImage2.SetActive(tmp);
+    }
+
+
+
+
 }

@@ -22,7 +22,7 @@ public class Item : ScriptableObject
     }
 
     //Dodana funckja
-    virtual public  string GetInfo()
+    virtual public  string GetInfo(bool isMainInventory=true)
     {
         return null;
     }
