@@ -13,16 +13,13 @@ public class SelectItem : MonoBehaviour
 
     void Update()
     {
-        //Tutaj sprawdzamy czy stać nas na budowanie wieży czy mamy wystarczająco dużo surowców ,jeśli nie to slot jest niedostępny 
-        //i aktywuje się wtedy gdy mamy odpowiednio dużo surowców 
-
-        foreach(Slot_Inv tmp in slots)
-        {
-           
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            //Wyswietlanie po wyborze klawisza 1 informacji o wybranej wiezy 
+            InfoItem.Instnace.SetInfoPanel2(true,slots[0].item.GetInfo(false));
+
             slots[0].useItem();
 
             slots[1].unUseItem();
@@ -31,6 +28,9 @@ public class SelectItem : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            //Wyswietlanie po wyborze klawisza 2 informacji o wybranej wiezy 
+            InfoItem.Instnace.SetInfoPanel2(true, slots[1].item.GetInfo(false));
+
             slots[1].useItem();
 
             slots[0].unUseItem();
@@ -39,6 +39,9 @@ public class SelectItem : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            //Wyswietlanie po wyborze klawisza 3 informacji o wybranej wiezy 
+            InfoItem.Instnace.SetInfoPanel2(true, slots[2].item.GetInfo(false));
+
             slots[2].useItem();
 
             slots[1].unUseItem();
@@ -47,6 +50,10 @@ public class SelectItem : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
+
+            //Wyswietlanie po wyborze klawisza 3 informacji o wybranej wiezy 
+            InfoItem.Instnace.SetInfoPanel2(true, slots[3].item.GetInfo(false));
+
             slots[3].useItem();
 
             slots[2].unUseItem();

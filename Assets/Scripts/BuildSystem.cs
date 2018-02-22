@@ -69,6 +69,17 @@ public class BuildSystem : MonoBehaviour
     }
     void Update()
     {
+        
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            InfoItem.Instnace.SetInfoPanel2(false, null);
+            buildModel.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
+            buildModel = null;
+            buildPrefab = null;
+            
+        }
+
+
         if (buildModel != null)
         {
             List<Renderer> rend = new List<Renderer>();
@@ -128,6 +139,7 @@ public class BuildSystem : MonoBehaviour
                         Tower tmp_Tower = tmp.transform.GetChild(0).GetComponent<Tower>();
 
                         MaterialManager.Instance.GetMaterial(tmp_Tower);
+                        InfoItem.Instnace.SetInfoPanel2(false, string.Empty);
 
                         tmp_Tower.WeightTower = countTower;
                         startCreateTower = StartCoroutine(CreateObject(tmp_Tower));
