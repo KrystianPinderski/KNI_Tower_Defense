@@ -70,7 +70,7 @@ public class Manager_Nexus : MonoBehaviour {
 				int random_Value = Random.Range (0, 5 + 1); // must have range 0-6
 				//print ("Random number: "+random_Value);
 
-				GameObject clone = Instantiate (enemy, points [random_Value].transform.position, transform.rotation);
+				GameObject clone = Instantiate (enemy, points [random_Value].transform.position, Quaternion.identity);
 				clone.name = "Enemy - Id: (" + i + ") - Random number: (" + random_Value + ")";
 				clone.transform.SetParent (Enemies.transform);
 

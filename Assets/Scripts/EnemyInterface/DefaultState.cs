@@ -13,13 +13,19 @@ public class DefaultState : EInterface {
         rotation = 0;
         myEnemy.MyTarget = null;
         myEnemy.navMeshAgent.SetDestination(myEnemy.nexus.transform.position);
+       
+
+        
     }
 
     public void OnUpdate()
     {
 
+        myEnemy.MyAnimatorController.SetTrigger("DefaultWalk");
         rotation += Time.deltaTime;
-        myEnemy.transform.eulerAngles = new Vector3(myEnemy.transform.eulerAngles.x, Mathf.Lerp(myEnemy.transform.eulerAngles.y, myEnemy.nexus.transform.eulerAngles.y,rotation), myEnemy.transform.eulerAngles.z);
+
+        Rotation();
+
         myEnemy.navMeshAgent.SetDestination(myEnemy.nexus.transform.position);
 
 
@@ -38,6 +44,17 @@ public class DefaultState : EInterface {
 
     public void OnExit()
     {
+        myEnemy.MyAnimatorController.ResetTrigger("DefaultWalk");
+    }
+
+
+    public void Rotation()
+    {
+        Vector3 targetDir = myEnemy.nexus.transform.position - myEnemy.transform.position;
+        targetDir.y = myEnemy.transform.position.y;
+        float step = 1f * Time.deltaTime;
+        Vector3 newDir = Vector3.RotateTowards(myEnemy.transform.forward, targetDir, step, 0.0F);
+        myEnemy.transform.rotation = Quaternion.LookRotation(newDir);
 
     }
 }

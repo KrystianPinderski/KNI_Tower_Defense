@@ -18,7 +18,7 @@ public class Scathe : MonoBehaviour {
 	void Update () {
         if (target != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, target.position.y + 1.11f, target.position.z), speed * Time.deltaTime);
         }
         else
         {
@@ -39,8 +39,9 @@ public class Scathe : MonoBehaviour {
     
     public void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag=="Enemy")
+        if (other.gameObject.tag=="Enemy")
         {
+            
             if(other.transform.GetComponent<Character>().MyHealth-damage<=0)
             {
                 myTower.GetNextTarget();//tutaj powiadomic wieze ze cel zniszczony i wziaść nastepne z kolejki

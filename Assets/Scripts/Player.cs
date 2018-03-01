@@ -48,11 +48,9 @@ public class Player : Character {
     private bool stopPlayerMove = false;
 
     // Use this for initialization
-    void Start () {
-        
+    public override void Start () {
+        base.Start();
         characterController = GetComponent<CharacterController>();
-       
-        
 	}
 	
 	// Update is called once per frame

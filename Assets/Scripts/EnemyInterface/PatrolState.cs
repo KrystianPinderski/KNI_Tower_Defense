@@ -16,30 +16,27 @@ public class PatrolState : EInterface {
         this.myEnemy = enemy;
         whichside = Random.Range(0, 2);
         remaingTime = 0;
+
+        //myEnemy.SetLayerAnimation(0);
     }
 
     public void OnUpdate()
     {
+        myEnemy.MyAnimatorController.SetTrigger("Patrol");
+        Rotation();
         myEnemy.navMeshAgent.SetDestination(myEnemy.transform.position);
-        Debug.Log("PatrolState");
         remaingTime += Time.deltaTime;
         if(remaingTime > timerPatrol)
         {
+            
             myEnemy.ChangeState(new DefaultState());
         }
         if(Patrol())
         {
+           
             myEnemy.ChangeState(new WalkState());
         }
 
-        if (whichside == 1)
-        {
-            myEnemy.transform.Rotate(0, 1f, 0);
-        }
-        else
-        {
-            myEnemy.transform.Rotate(0, -1f, 0);
-        }
     }
 
 
@@ -50,7 +47,7 @@ public class PatrolState : EInterface {
 
     public void OnExit()
     {
-
+        myEnemy.MyAnimatorController.ResetTrigger("Patrol");
     }
 
     public bool Patrol()
@@ -61,5 +58,29 @@ public class PatrolState : EInterface {
             return true;
         }
         return false;
+    }
+
+
+    public void Rotation()
+    {
+
+        Vector3 point = Vector3.zero;
+        if(whichside==0)
+        {
+            point = myEnemy.leftPatrolPoint.position;
+        }
+        else
+        {
+            point = myEnemy.rightPatrolPoint.position;
+        }
+        Vector3 targetDir = point - myEnemy.transform.position;
+        targetDir.y = myEnemy.transform.position.y;
+        float step = 0.5f * Time.deltaTime;
+        Vector3 newDir = Vector3.RotateTowards(myEnemy.transform.forward, targetDir, step, 0.0F);
+        myEnemy.transform.rotation = Quaternion.LookRotation(newDir);
+        newDir.y = myEnemy.PatrolPoint.transform.position.y;
+        myEnemy.PatrolPoint.transform.rotation = Quaternion.LookRotation(newDir);
+        
+
     }
 }

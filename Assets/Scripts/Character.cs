@@ -7,7 +7,15 @@ public abstract class Character : MonoBehaviour {
     [SerializeField]
     private StateBar HealthBar;
 
-   
+    [SerializeField]
+    private Animator animatorController;
+    public Animator MyAnimatorController
+    {
+        get
+        {
+            return animatorController;
+        }
+    }
 
     public float MyHealth
     {
@@ -18,9 +26,10 @@ public abstract class Character : MonoBehaviour {
     }
     //protected float myHealth;
     // Use this for initialization
-    void Start()
+    public virtual void Start()
     {
-
+        if(GetComponent<Animator>()!=null)
+        animatorController = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -37,6 +46,22 @@ public abstract class Character : MonoBehaviour {
         {
             Death();
             
+        }
+    }
+
+    //Ustawienie danego layotu animacji ,reszta anulowana 
+    public void SetLayerAnimation(int index)
+    {
+        for(int i=0;i<MyAnimatorController.layerCount;i++)
+        {
+            if(i!=index)
+            {
+                MyAnimatorController.SetLayerWeight(i, 0);
+            }
+            else
+            {
+                MyAnimatorController.SetLayerWeight(index, 1);
+            }
         }
     }
 
