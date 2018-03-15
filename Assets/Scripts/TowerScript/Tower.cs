@@ -84,18 +84,7 @@ public abstract class Tower : MonoBehaviour {
         }
     }
 
-    private bool isActivate;
-    public bool IsActivate
-    {
-        get
-        {
-            return isActivate;
-        }
-        set
-        {
-            isActivate = value;
-        }
-    }
+    
 
     [SerializeField]
     private Range myRange;
@@ -107,18 +96,26 @@ public abstract class Tower : MonoBehaviour {
         }
     }
 
+    [SerializeField]
+    private GameObject gunoBject;
+
 
 
     // Use this for initialization
     public virtual void Start () {
-        isActivate = true;
-       
+        myRange.IsActivate = false;
+        myRange.gunObjectTower = gunoBject;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    public void SetActivateTower()
+    {
+        myRange.IsActivate = true;
+    }
 
    // public virtual void OnTriggerEnter(Collider other)
    // {

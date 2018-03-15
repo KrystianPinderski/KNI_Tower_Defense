@@ -12,6 +12,9 @@ public class Control_Enemy : Character {
 	public GameObject nexus;
 
 
+    
+
+
     public GameObject imageBar;
     public Transform MyTarget;
     public float AttackRange=2f;
@@ -21,6 +24,8 @@ public class Control_Enemy : Character {
     public Transform leftPatrolPoint;
     public Transform rightPatrolPoint;
 
+    public Boolean open;
+    public Boolean close;
 
     public NavMeshAgent navMeshAgent;
 
@@ -32,7 +37,9 @@ public class Control_Enemy : Character {
 
     void Awake()
     {
-        
+        open = false;
+        close = false;
+        imageBar.SetActive(false);
         nexus = GameObject.FindGameObjectWithTag("Nexus");
         player = FindObjectOfType<Player>().GetComponent<Transform>();
         navMeshAgent =transform.parent.GetComponent<NavMeshAgent>();
@@ -62,6 +69,16 @@ public class Control_Enemy : Character {
 			_col.gameObject.GetComponent<Manager_Nexus> ().TakeDamage ();
 		}
 	}
+
+    void OnTriggerExit(Collider _col)
+    {
+        if(_col.tag=="Gate"&& tag== "ModelEnemy")
+        {
+            imageBar.SetActive(true);
+            tag = "Enemy";
+            _col.GetComponent<Gate>().ResetValue(); 
+        }
+    }
 
     public override void TakeDamage(float damage,Transform myTarget,bool playerAttack)
     {

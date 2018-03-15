@@ -143,6 +143,7 @@ public class BuildSystem : MonoBehaviour
 
                         tmp_Tower.WeightTower = countTower;
                         startCreateTower = StartCoroutine(CreateObject(tmp_Tower));
+                        Destroy(buildModel);
                         buildModel = null;
                       
                     }
@@ -171,6 +172,7 @@ public class BuildSystem : MonoBehaviour
         p.StopPlayerMove(false);
         Bar.SetActive(false);
         CanShoot = true;
+        tmp_Tower.SetActivateTower();
         sights.SetActive(true);
     }
 

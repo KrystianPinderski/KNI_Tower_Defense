@@ -7,6 +7,19 @@ public class Range : MonoBehaviour {
     [SerializeField]
     private float speedScathe;
 
+    private bool isActivate;
+    public bool IsActivate
+    {
+        get
+        {
+            return isActivate;
+        }
+        set
+        {
+            isActivate = value;
+        }
+    }
+
     [SerializeField]
     private float timeAttack;
 
@@ -24,7 +37,7 @@ public class Range : MonoBehaviour {
 
     private Transform target;
 
-    
+    public GameObject gunObjectTower;
 
     [SerializeField]
     private GameObject scathe;
@@ -47,10 +60,15 @@ public class Range : MonoBehaviour {
 	void Update () {
         timeduration += Time.deltaTime;
 
-
-        if(target!=null && timeduration >= timeAttack)
+         if(target!= null && IsActivate)
         {
-            GameObject tmp = Instantiate(scathe, transform.position, Quaternion.identity);
+            gunObjectTower.transform.LookAt(target);
+        }
+       
+        if (target!=null && timeduration >= timeAttack && IsActivate)
+        {
+  
+            GameObject tmp = Instantiate(scathe, gunObjectTower.transform.GetChild(2).position, Quaternion.identity);
             tmp.GetComponent<Scathe>().Instance(target, speedScathe, damge, this);
             timeduration = 0;
         }
@@ -85,5 +103,22 @@ public class Range : MonoBehaviour {
                 target = null;
             
         }
+    }
+
+
+    public void Rotation()
+    {
+
+        if (target != null)
+        {
+            Vector3 targetDir = target.transform.position - gunObjectTower.transform.position;
+            //targetDir.y = gunObjectTower.transform.position.y;
+            targetDir.x = gunObjectTower.transform.position.x;
+            targetDir.z = gunObjectTower.transform.position.z;
+            float step = 1f * Time.deltaTime;
+            Vector3 newDir = Vector3.RotateTowards(gunObjectTower.transform.forward, targetDir, step, 0.5F);
+            gunObjectTower.transform.rotation = Quaternion.LookRotation(newDir);
+        }
+       
     }
 }

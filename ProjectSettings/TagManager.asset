@@ -12,6 +12,8 @@ TagManager:
   - BulidItem
   - Enemy
   - Material
+  - ModelEnemy
+  - Gate
   layers:
   - Default
   - TransparentFX
