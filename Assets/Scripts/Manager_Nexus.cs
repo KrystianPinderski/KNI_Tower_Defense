@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class Manager_Nexus : MonoBehaviour {
 
-	[Header("Nexus")]
+
+    private static Manager_Nexus instance;
+    public static Manager_Nexus Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<Manager_Nexus>();
+            }
+            return instance;
+        }
+    }
+
+
+
+    [Header("Nexus")]
 	public GameObject nexus; //Must have public, because generate Gizmos.DrawLine error
 	public float hp_Nexus = 100.00f;
 	public float damage_Value = 0.10f;
@@ -13,6 +29,7 @@ public class Manager_Nexus : MonoBehaviour {
 	[Header("Points spawn")]
 	public GameObject[] points;
 
+    [SerializeField]
 	private GameObject Enemies;
 	//private int id = 0;
 
@@ -26,12 +43,12 @@ public class Manager_Nexus : MonoBehaviour {
 	{
 
 		//nexus = this.gameObject;
-		Enemies = new GameObject (); //Parent clone
-		Enemies.name = "Parent - Clones Enemies";
+		//Enemies = new GameObject (); //Parent clone
+		//Enemies.name = "Parent - Clones Enemies";
 
 
 
-		StartCoroutine (GenerateEnemy(stay_Time_Wave,how_Much_Mobs,stay_Time_Generate_Next_Mob));
+		//StartCoroutine (GenerateEnemy(stay_Time_Wave,how_Much_Mobs,stay_Time_Generate_Next_Mob));
 
 
 	}
@@ -60,14 +77,14 @@ public class Manager_Nexus : MonoBehaviour {
 	{
 		//if think add button start
 
-		while (true) 
-		{
+		//while (true) 
+		//{
 			//print ("Waves - Id: ("+id_Waves+")");
 
 			int i = 0;
 			while (i <_how_Much_Mobs) 
 			{
-				int random_Value = Random.Range (0, 5 + 1); // must have range 0-6
+				int random_Value = Random.Range (0, 5); // must have range 0-6
 				//print ("Random number: "+random_Value);
 
 				GameObject clone = Instantiate (enemy, points [random_Value].transform.position, Quaternion.identity);
@@ -78,10 +95,10 @@ public class Manager_Nexus : MonoBehaviour {
 				yield return new WaitForSeconds (_stay_Time_Generate_Next_Mob);
 			i++;
 			}
-			yield return new WaitForSeconds (_stay_Time_Wave);
+			//yield return new WaitForSeconds (_stay_Time_Wave);
 
-			id_Waves++;
-		}
+			//id_Waves++;
+		//}
 	}
 
 
@@ -99,6 +116,12 @@ public class Manager_Nexus : MonoBehaviour {
 		}
 			
 	}
+
+
+    public void NextLevel(float time,int enemys,float timestep)
+    {
+        StartCoroutine(GenerateEnemy(time, enemys, timestep));
+    }
 
 
 }

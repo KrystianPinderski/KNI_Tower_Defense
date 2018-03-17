@@ -73,7 +73,7 @@ public class BuildSystem : MonoBehaviour
         if(Input.GetKey(KeyCode.Escape))
         {
             InfoItem.Instnace.SetInfoPanel2(false, null);
-            buildModel.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
+            //buildModel.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
             buildModel = null;
             buildPrefab = null;
             

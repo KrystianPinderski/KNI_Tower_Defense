@@ -10,7 +10,12 @@ public class Item : ScriptableObject
 {
 	
 	new public string name = "Name";
+
 	public Sprite icon;
+   // public ItemUSe typeItem;
+
+    public bool IsItemUse;
+    public string description;
 
 	virtual public void Use()
 	{
@@ -24,7 +29,8 @@ public class Item : ScriptableObject
     //Dodana funckja
     virtual public  string GetInfo(bool isMainInventory=true)
     {
-        return null;
+        
+        return description;
     }
 }
 

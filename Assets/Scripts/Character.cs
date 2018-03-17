@@ -23,6 +23,10 @@ public abstract class Character : MonoBehaviour {
         {
             return HealthBar.CurrentHealth;
         }
+        set
+        {
+            HealthBar.CurrentHealth = value;
+        }
     }
     //protected float myHealth;
     // Use this for initialization

@@ -7,6 +7,21 @@ using UnityEngine.AI;
 public class Player : Character {
 
 
+
+
+    private static Player instance;
+    public static Player Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<Player>();
+            }
+            return instance;
+        }
+    }
+
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -17,15 +32,26 @@ public class Player : Character {
     private float downspeedJump;
 
 
-    
+    public float MySpeed
+    {
+        get
+        {
+            return speed;
+        }
+        set
+        {
+            speed = value;
+        }
+    }
 
 
 
 
     public float RangeShoot;
-    public float Damage = 50f;
+    public float Damage = 25f;
     public float timeShoot;
 
+    public float DamageFromEnemy  = 5f;
     CharacterController characterController;
 
     private float moveLR; //get value of left-right 
@@ -50,6 +76,7 @@ public class Player : Character {
     // Use this for initialization
     public override void Start () {
         base.Start();
+       
         characterController = GetComponent<CharacterController>();
 	}
 	
@@ -93,10 +120,12 @@ public class Player : Character {
         direction = transform.rotation * direction ;
 
         characterController.Move(direction * Time.deltaTime);
+        if (!Inventory.Instance.IsOpen)
         transform.Rotate(0,mouseX,0);
 
         yRotCounter += mouseY * 100.0f *Time.deltaTime;
         yRotCounter = Mathf.Clamp(yRotCounter, -45f, 45f);
+        if(!Inventory.Instance.IsOpen)
         camera.transform.localEulerAngles = new Vector3(-yRotCounter,0,0);
     }
 
@@ -161,7 +190,7 @@ public class Player : Character {
 
     public override void TakeDamage(float damage, Transform myTarget, bool playerAttack)
     {
-        base.TakeDamage(damage,null,false);
+        base.TakeDamage(DamageFromEnemy, null,false);
     }
 
     /* public void Shoot()

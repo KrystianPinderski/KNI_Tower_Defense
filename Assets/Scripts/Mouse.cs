@@ -5,6 +5,19 @@ using UnityEngine;
 public class Mouse : MonoBehaviour
 {
 
+    private static Mouse instance;
+    public static Mouse Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<Mouse>();
+            }
+            return instance;
+        }
+    }
+
     private bool isVisible;
 
     // Update is called once per frame
@@ -16,7 +29,7 @@ public class Mouse : MonoBehaviour
 
     }
 
-    void changeVisible()
+    public void changeVisible()
     {
         isVisible = !isVisible;
     }

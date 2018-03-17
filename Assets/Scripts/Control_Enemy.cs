@@ -64,9 +64,11 @@ public class Control_Enemy : Character {
 	{
 		if (_col.gameObject.tag.Equals ("Nexus"))
 		{
-			Destroy(this.gameObject);
-			//print ("Destroy: "+this.gameObject.name);
-			_col.gameObject.GetComponent<Manager_Nexus> ().TakeDamage ();
+            Player.Instance.MyHealth -= EnemyDamage ;
+            MyGameManager.Instance.EnemyDeath += 1;
+            Destroy(this.gameObject.transform.parent.gameObject);
+            //print ("Destroy: "+this.gameObject.name);
+            _col.gameObject.GetComponent<Manager_Nexus> ().TakeDamage ();
 		}
 	}
 
@@ -105,6 +107,7 @@ public class Control_Enemy : Character {
 
     public override void Death()
     {
+        MyGameManager.Instance.EnemyDeath += 1;
         Instantiate(MaterialManager.Instance.InstantiateMaterial(), transform.position, Quaternion.identity);
         Destroy(this.gameObject.transform.parent.gameObject);
     }
