@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e9e38c1bd02f34f47be3b580c6262d8f
-timeCreated: 1521321167
+guid: 37d05f6db3d4d21409749170b8e0978f
+timeCreated: 1521366109
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -116,6 +116,7 @@ ModelImporter:
     2100000: Material
     4300000: dwarf_obj
     7400000: Armature|Idle
+    7400002: Armature|RunAnimation
     9500000: //RootNode
     13700000: dwarf_obj
   externalObjects: {}
