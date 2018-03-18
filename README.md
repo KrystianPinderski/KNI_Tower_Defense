@@ -1,4 +1,3 @@
-"# KNI_Tower_Defense" 
 Title: Tree of Life: Tower Defence
 
 Description:
