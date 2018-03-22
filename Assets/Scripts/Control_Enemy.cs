@@ -49,13 +49,15 @@ public class Control_Enemy : Character {
 
 	public override void Start () 
 	{
+        
         base.Start();
     }
 	
 
 	public override void  Update ()
     {
-        
+       
+       
         enemyInterface.OnUpdate();
         imageBar.transform.eulerAngles=new Vector3(imageBar.transform.eulerAngles.x, player.transform.eulerAngles.y, imageBar.transform.eulerAngles.z);
 	}

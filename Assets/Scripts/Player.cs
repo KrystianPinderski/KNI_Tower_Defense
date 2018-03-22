@@ -3,10 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Player : Character {
 
 
+
+
+    public Animator myAnimator;
 
 
     private static Player instance;
@@ -82,7 +86,6 @@ public class Player : Character {
 	
 	// Update is called once per frame
 	public   override void Update () {
-       
         base.Update();
         ApplyGravity();
         GetInput();
@@ -118,6 +121,18 @@ public class Player : Character {
     {
         Vector3 direction=new Vector3(valueLR,valueJump ,valueTB);
         direction = transform.rotation * direction ;
+
+
+        if(moveLR!=0f || moveTB!=0f)
+        {
+            myAnimator.ResetTrigger("Idle");
+            myAnimator.SetTrigger("Run");
+        }
+        else
+        {
+            myAnimator.ResetTrigger("Run");
+            myAnimator.SetTrigger("Idle");
+        }
 
         characterController.Move(direction * Time.deltaTime);
         if (!Inventory.Instance.IsOpen)
@@ -211,7 +226,9 @@ public class Player : Character {
 
     public override void Death()
     {
+        SceneManager.LoadScene(0);
         Destroy(this.gameObject);
+       
     }
 
 

@@ -33,7 +33,7 @@ public class BuildSystem : MonoBehaviour
     public GameObject sights;
     
     public Camera fpsCam;
-    private float hitRange=5f;
+    private float hitRange=12f;
 
     private int countTower = 0;
     private bool canShoot=true;

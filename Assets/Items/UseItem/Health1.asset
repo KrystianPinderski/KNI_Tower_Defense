@@ -14,4 +14,4 @@ MonoBehaviour:
   name: Health1
   icon: {fileID: 21300000, guid: b34a3a52ea484934dbcb941a769aab28, type: 3}
   IsItemUse: 1
-  description: 'Add +1 Health \n Money: -2'
+  description: 'Add +1 Health - Money: -2'

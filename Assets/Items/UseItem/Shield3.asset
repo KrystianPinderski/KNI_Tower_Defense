@@ -14,4 +14,4 @@ MonoBehaviour:
   name: Shield3
   icon: {fileID: 21300000, guid: 7bd570b2512452547a7769d8df945f70, type: 3}
   IsItemUse: 1
-  description: 'Add +3 Shield \n Money: -4'
+  description: 'Add +3 Shield - Money: -4'

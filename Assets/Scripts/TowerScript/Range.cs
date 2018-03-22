@@ -59,8 +59,9 @@ public class Range : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timeduration += Time.deltaTime;
-
-         if(target!= null && IsActivate)
+        //Tutaj zmiana
+       
+         if (target!= null && IsActivate)
         {
             gunObjectTower.transform.LookAt(target);
         }

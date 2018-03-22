@@ -14,4 +14,4 @@ MonoBehaviour:
   name: Gun4
   icon: {fileID: 21300000, guid: 98d0e0e61206cc942952a9216c270909, type: 3}
   IsItemUse: 1
-  description: 'Add +4 Gun \n Money: -5'
+  description: 'Add +4 Gun - Money: -5'
