@@ -22,7 +22,7 @@ public class AttackState : EInterface {
 
     public void OnUpdate()
     {
-        Debug.Log(myEnemy.navMeshAgent.remainingDistance);
+        Debug.Log(myEnemy.navMeshAgent.remainingDistance);    
         myEnemy.navMeshAgent.SetDestination(myEnemy.MyTarget.position);
         rotation += Time.deltaTime;
         Rotation();
