@@ -45,61 +45,73 @@ public class Slot_Inv :MonoBehaviour, IPointerEnterHandler,IPointerExitHandler
             if (item.name == "Gun1" &&  MaterialManager.Instance.Value_Money >= 2)
             {
                 Player.Instance.Damage += 1;
+                Player.Instance.MySwordBar += 1;
                 MaterialManager.Instance.Value_Money += -2;
             }
             if (item.name == "Gun2" && MaterialManager.Instance.Value_Money >= 3)
             {
                 Player.Instance.Damage += 2;
+                Player.Instance.MySwordBar += 2;
                 MaterialManager.Instance.Value_Money += -3;
             }
             if (item.name == "Gun3" && MaterialManager.Instance.Value_Money >= 4)
             {
                 Player.Instance.Damage += 3;
+                Player.Instance.MySwordBar += 3;
                 MaterialManager.Instance.Value_Money += -4;
             }
             if (item.name == "Gun4" && MaterialManager.Instance.Value_Money >= 5)
             {
                 Player.Instance.Damage += 4;
+                Player.Instance.MySwordBar += 4;
                 MaterialManager.Instance.Value_Money += -5;
             }
             if (item.name == "Shield1" && MaterialManager.Instance.Value_Money >= 2)
             {
                 Player.Instance.DamageFromEnemy -= (1 / 10);
+                Player.Instance.MyShieldBar += 1;
                 MaterialManager.Instance.Value_Money += -2;
             }
             if (item.name == "Shield2" && MaterialManager.Instance.Value_Money >= 3)
             {
                 Player.Instance.DamageFromEnemy -= (2 / 10);
+                Player.Instance.MyShieldBar += 2;
                 MaterialManager.Instance.Value_Money += -3;
             }
             if (item.name == "Shield3" && MaterialManager.Instance.Value_Money >= 4)
             {
                 Player.Instance.DamageFromEnemy -= (3 / 10);
+                Player.Instance.MyShieldBar += 3;
                 MaterialManager.Instance.Value_Money += -4;
             }
             if (item.name == "Shield4" && MaterialManager.Instance.Value_Money >= 5)
             {
                 Player.Instance.DamageFromEnemy -= (4 / 10);
+                Player.Instance.MyShieldBar += 4;
                 MaterialManager.Instance.Value_Money += -5;
             }
             if (item.name == "Shoe1" && MaterialManager.Instance.Value_Money >= 2)
             {
                 Player.Instance.MySpeed += (1/10);
+                Player.Instance.MyShoeBar += 1;
                 MaterialManager.Instance.Value_Money += -2;
             }
             if (item.name == "Shoe2" && MaterialManager.Instance.Value_Money >= 3)
             {
                 Player.Instance.MySpeed += (2 / 10);
+                Player.Instance.MyShoeBar += 2;
                 MaterialManager.Instance.Value_Money += -3;
             }
             if (item.name == "Shoe3" && MaterialManager.Instance.Value_Money >= 4)
             {
                 Player.Instance.MySpeed += (3 / 10);
+                Player.Instance.MyShoeBar += 3;
                 MaterialManager.Instance.Value_Money += -4;
             }
             if (item.name == "Shoe4" && MaterialManager.Instance.Value_Money >= 5)
             {
                 Player.Instance.MySpeed += (4 / 10);
+                Player.Instance.MyShoeBar += 4;
                 MaterialManager.Instance.Value_Money += -5;
             }
         }

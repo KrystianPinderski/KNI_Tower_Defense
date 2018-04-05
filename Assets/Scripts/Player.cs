@@ -9,8 +9,52 @@ public class Player : Character {
 
 
 
+    [SerializeField]
+    private StateBar ShoeBar;
+    [SerializeField]
+    private StateBar SwordBar;
+    [SerializeField]
+    private StateBar ShieldBar;
 
     public Animator myAnimator;
+
+
+
+    public float MyShoeBar
+    {
+        get
+        {
+            return ShoeBar.CurrentHealth;
+        }
+        set
+        {
+            ShoeBar.CurrentHealth = value;
+        }
+    }
+
+    public float MySwordBar
+    {
+        get
+        {
+            return SwordBar.CurrentHealth;
+        }
+        set
+        {
+            SwordBar.CurrentHealth = value;
+        }
+    }
+
+    public float MyShieldBar
+    {
+        get
+        {
+            return ShieldBar.CurrentHealth;
+        }
+        set
+        {
+            ShieldBar.CurrentHealth = value;
+        }
+    }
 
 
     private static Player instance;

@@ -67,6 +67,10 @@ public class Control_Enemy : Character {
 		if (_col.gameObject.tag.Equals ("Nexus"))
 		{
             Player.Instance.MyHealth -= EnemyDamage ;
+            Player.Instance.MyShieldBar -= 2.5f;
+            Player.Instance.MyShoeBar -= 2.5f;
+            Player.Instance.MySwordBar -= 2.5f;
+
             MyGameManager.Instance.EnemyDeath += 1;
             Destroy(this.gameObject.transform.parent.gameObject);
             //print ("Destroy: "+this.gameObject.name);
