@@ -78,7 +78,7 @@ public class Player : Character {
     private float speedJump;
     [SerializeField]
     private float downspeedJump;
-
+    public bool CanAttack=true;
 
     public float MySpeed
     {
@@ -133,7 +133,8 @@ public class Player : Character {
         base.Update();
         ApplyGravity();
         GetInput();
-       
+
+        if (CanAttack == true)
         Move(moveLR,moveTB);
        
 
@@ -167,17 +168,19 @@ public class Player : Character {
         direction = transform.rotation * direction ;
 
 
-        if(moveLR!=0f || moveTB!=0f)
-        {
-            myAnimator.ResetTrigger("Idle");
-            myAnimator.SetTrigger("Run");
-        }
-        else
-        {
-            myAnimator.ResetTrigger("Run");
-            myAnimator.SetTrigger("Idle");
-        }
-
+      
+            if (moveLR != 0f || moveTB != 0f)
+            {
+                myAnimator.ResetTrigger("Idle");
+                myAnimator.SetTrigger("Run");
+            }
+            else
+            {
+                myAnimator.ResetTrigger("Run");
+                myAnimator.SetTrigger("Idle");
+            }
+        
+       
         characterController.Move(direction * Time.deltaTime);
         if (!Inventory.Instance.IsOpen)
         transform.Rotate(0,mouseX,0);
@@ -192,7 +195,9 @@ public class Player : Character {
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            myAnimator.SetTrigger("Jump");
             isJumped = true;
+            
         }
         //timeShoot += Time.deltaTime *  4;
         if (Input.GetMouseButton(1))

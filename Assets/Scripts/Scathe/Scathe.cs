@@ -22,6 +22,7 @@ public class Scathe : MonoBehaviour {
         }
         else
         {
+            if(myTower!=null)
             myTower.GetNextTarget();//tutaj powiadomic wieze ze celu już nie ma  i bierzemy następne z kolejki
             Destroy(this.gameObject);
             
@@ -42,7 +43,7 @@ public class Scathe : MonoBehaviour {
         if (other.gameObject.tag=="Enemy")
         {
             
-            if(other.transform.GetComponent<Character>().MyHealth-damage<=0)
+            if(other.transform.GetComponent<Character>().MyHealth-damage<=0 && myTower != null)
             {
                 myTower.GetNextTarget();//tutaj powiadomic wieze ze cel zniszczony i wziaść nastepne z kolejki
             }
