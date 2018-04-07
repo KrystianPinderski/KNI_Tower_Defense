@@ -51,6 +51,7 @@ public class ShootSystem : MonoBehaviour
                     //Control_Enemy enemy = hit.transform.GetComponent<Control_Enemy>();
 
                     target = hit.transform.gameObject;
+                   
                     //Player player = transform.GetComponent<Player>();
                    // GameObject tmp = Instantiate(scathe, gunPoint.transform.position, Quaternion.identity);
                     //tmp.GetComponent<Scathe>().Instance(target.transform, 10f, player.Damage, null);
@@ -81,6 +82,7 @@ public class ShootSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         Player player = transform.GetComponent<Player>();
+        target.GetComponent<Control_Enemy>().TakeDamage(0, player.transform, true);
         GameObject tmp = Instantiate(scathe, gunPoint.transform.position, Quaternion.identity);
         tmp.GetComponent<Scathe>().Instance(target.transform, 50f, player.Damage, null);
         target = null;

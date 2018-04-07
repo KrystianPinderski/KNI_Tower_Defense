@@ -145,7 +145,9 @@ public class BuildSystem : MonoBehaviour
                         startCreateTower = StartCoroutine(CreateObject(tmp_Tower));
                         Destroy(buildModel);
                         buildModel = null;
-                      
+                        buildPrefab = null;
+
+
                     }
                 }
 
@@ -155,7 +157,8 @@ public class BuildSystem : MonoBehaviour
 
     IEnumerator CreateObject(Tower tmp_Tower)
     {
-        
+        Player.Instance.myAnimator.SetTrigger("Idle");
+        Player.Instance.myAnimator.SetTrigger("Build");
         p.StopPlayerMove(true);
         CanShoot = false;
         sights.SetActive(false);
@@ -174,6 +177,7 @@ public class BuildSystem : MonoBehaviour
         CanShoot = true;
         tmp_Tower.SetActivateTower();
         sights.SetActive(true);
+        Player.Instance.myAnimator.SetTrigger("NotBuild");
     }
 
 

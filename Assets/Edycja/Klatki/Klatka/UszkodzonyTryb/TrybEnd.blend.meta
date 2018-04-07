@@ -1,84 +1,18 @@
 fileFormatVersion: 2
-guid: 8ca497166ebe7574b871c93b0e6a8d09
-timeCreated: 1521250058
+guid: d95b50e657c068d47bc918b1214af463
+timeCreated: 1523092830
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Armature
-    100004: Chest
-    100006: dwarf_obj
-    100008: Fingers01_L
-    100010: Fingers01_R_001
-    100012: Fingers02_L
-    100014: Fingers02_R_001
-    100016: Foot_L
-    100018: Foot_R_001
-    100020: Hand_L
-    100022: Hand_R_001
-    100024: Head
-    100026: LegControl_L
-    100028: LegControl_R_001
-    100030: LowerArm_L
-    100032: LowerArm_R_001
-    100034: LowerLeg_L
-    100036: LowerLeg_R_001
-    100038: Neck
-    100040: Thumb01_L
-    100042: Thumb01_R_001
-    100044: Thumb02_L
-    100046: Thumb02_R_001
-    100048: Toes_L
-    100050: Toes_R_001
-    100052: Torso
-    100054: UpperArm_L
-    100056: UpperArm_R_001
-    100058: UpperLeg_L
-    100060: UpperLeg_R_001
     400000: //RootNode
-    400002: Armature
-    400004: Chest
-    400006: dwarf_obj
-    400008: Fingers01_L
-    400010: Fingers01_R_001
-    400012: Fingers02_L
-    400014: Fingers02_R_001
-    400016: Foot_L
-    400018: Foot_R_001
-    400020: Hand_L
-    400022: Hand_R_001
-    400024: Head
-    400026: LegControl_L
-    400028: LegControl_R_001
-    400030: LowerArm_L
-    400032: LowerArm_R_001
-    400034: LowerLeg_L
-    400036: LowerLeg_R_001
-    400038: Neck
-    400040: Thumb01_L
-    400042: Thumb01_R_001
-    400044: Thumb02_L
-    400046: Thumb02_R_001
-    400048: Toes_L
-    400050: Toes_R_001
-    400052: Torso
-    400054: UpperArm_L
-    400056: UpperArm_R_001
-    400058: UpperLeg_L
-    400060: UpperLeg_R_001
-    2100000: unnamed
-    2100002: Material
+    2100000: Material_001
     2300000: //RootNode
     3300000: //RootNode
-    4300000: dwarf_obj
+    4300000: Torus
     7400000: Default Take
-    7400002: ArmatureAction_002
-    7400004: Idle
-    7400006: RunAnimation
-    7400008: Shot
     9500000: //RootNode
-    13700000: dwarf_obj
   externalObjects: {}
   materials:
     importMaterials: 1

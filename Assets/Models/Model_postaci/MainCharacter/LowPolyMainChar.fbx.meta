@@ -59,6 +59,7 @@ ModelImporter:
     100102: UpperArm.R.001
     100104: UpperLeg.L
     100106: UpperLeg.R.001
+    100108: Sun
     400000: Armature
     400002: Chest
     400004: dwarf_obj
@@ -113,11 +114,13 @@ ModelImporter:
     400102: UpperArm.R.001
     400104: UpperLeg.L
     400106: UpperLeg.R.001
+    400108: Sun
     2100000: Material
     4300000: dwarf_obj
     7400000: Armature|Idle
     7400002: Armature|RunAnimation
     9500000: //RootNode
+    10800000: Sun
     13700000: dwarf_obj
   externalObjects: {}
   materials:

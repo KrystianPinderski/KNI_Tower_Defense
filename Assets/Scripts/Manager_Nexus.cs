@@ -25,8 +25,9 @@ public class Manager_Nexus : MonoBehaviour {
 	public float hp_Nexus = 100.00f;
 	public float damage_Value = 0.10f;
 	public GameObject enemy; // prefab
+    public GameObject enemySnacke; // prefab
 
-	[Header("Points spawn")]
+    [Header("Points spawn")]
 	public GameObject[] points;
 
     [SerializeField]
@@ -85,12 +86,21 @@ public class Manager_Nexus : MonoBehaviour {
 			while (i <_how_Much_Mobs) 
 			{
 				int random_Value = Random.Range (0, 5); // must have range 0-6
-				//print ("Random number: "+random_Value);
+                                                        //print ("Random number: "+random_Value);
+               if (i % 5 == 0)
+               {
+                GameObject clone = Instantiate(enemySnacke, points[random_Value].transform.position, Quaternion.identity);
+                clone.name = "Enemy - Id: (" + i + ") - Random number: (" + random_Value + ")";
+                clone.transform.SetParent(Enemies.transform);
+               }
+               else
+               {
 
-				GameObject clone = Instantiate (enemy, points [random_Value].transform.position, Quaternion.identity);
-				clone.name = "Enemy - Id: (" + i + ") - Random number: (" + random_Value + ")";
-				clone.transform.SetParent (Enemies.transform);
 
+                GameObject clone = Instantiate(enemy, points[random_Value].transform.position, Quaternion.identity);
+                clone.name = "Enemy - Id: (" + i + ") - Random number: (" + random_Value + ")";
+                clone.transform.SetParent(Enemies.transform);
+                }
 
 				yield return new WaitForSeconds (_stay_Time_Generate_Next_Mob);
 			i++;

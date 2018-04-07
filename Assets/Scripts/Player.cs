@@ -8,6 +8,13 @@ using UnityEngine.SceneManagement;
 public class Player : Character {
 
 
+    public GameObject GunToWalk;
+    public GameObject GunToBuild;
+
+    public GameObject MlotToWalk;
+    public GameObject MlotToBuild;
+
+
 
     [SerializeField]
     private StateBar ShoeBar;
@@ -290,5 +297,14 @@ public class Player : Character {
             MaterialManager.Instance.AddMaterial(other.GetComponent<Material>());
             Destroy(other.gameObject);
         }
+    }
+
+
+    public void ChangeShowrd()
+    {
+        MlotToBuild.SetActive(!MlotToBuild.active);
+        MlotToWalk.SetActive(!MlotToWalk.active);
+        GunToBuild.SetActive(!GunToBuild.active);
+        GunToWalk.SetActive(!GunToWalk.active);
     }
 }
