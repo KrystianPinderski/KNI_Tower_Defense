@@ -103,7 +103,7 @@ public abstract class Tower : MonoBehaviour {
 
     // Use this for initialization
     public virtual void Start () {
-        myRange.IsActivate = false;
+        myRange.IsActivate = true;
         myRange.gunObjectTower = gunoBject;
 	}
 	

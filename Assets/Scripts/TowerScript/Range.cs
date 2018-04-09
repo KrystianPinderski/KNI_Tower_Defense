@@ -54,6 +54,7 @@ public class Range : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         enemyQueue = new Queue<Transform>();
+        IsActivate = true;
 	}
 	
 	// Update is called once per frame

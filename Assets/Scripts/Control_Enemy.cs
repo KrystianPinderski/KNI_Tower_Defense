@@ -39,7 +39,7 @@ public class Control_Enemy : Character {
     {
         open = false;
         close = false;
-        imageBar.SetActive(false);
+        imageBar.SetActive(true); //false
         nexus = GameObject.FindGameObjectWithTag("Nexus");
         player = FindObjectOfType<Player>().GetComponent<Transform>();
         navMeshAgent =transform.parent.GetComponent<NavMeshAgent>();
@@ -49,14 +49,14 @@ public class Control_Enemy : Character {
 
 	public override void Start () 
 	{
-        
+       
         base.Start();
     }
 	
 
 	public override void  Update ()
     {
-       
+
        
         enemyInterface.OnUpdate();
         imageBar.transform.eulerAngles=new Vector3(imageBar.transform.eulerAngles.x, player.transform.eulerAngles.y, imageBar.transform.eulerAngles.z);
