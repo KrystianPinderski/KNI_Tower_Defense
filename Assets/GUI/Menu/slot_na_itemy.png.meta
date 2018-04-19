@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 26d4c25ce2d9bbb4a84b94cc302a9bb1
-timeCreated: 1524162161
+guid: 4a79825b10a9d59428b175b4003474df
+timeCreated: 1524162162
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Menu_tlo2_0
+    21300000: slot_na_itemy_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -92,13 +92,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu_tlo2_0
+      name: slot_na_itemy_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 11
-        width: 833
-        height: 823
+        x: 27
+        y: 35
+        width: 915
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

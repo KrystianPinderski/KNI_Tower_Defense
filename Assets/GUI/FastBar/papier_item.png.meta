@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 26d4c25ce2d9bbb4a84b94cc302a9bb1
-timeCreated: 1524162161
+guid: c5c12199c5b70a4489d9cbe596c65ebb
+timeCreated: 1524165238
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Menu_tlo2_0
+    21300000: papier_item_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -33,7 +33,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
     wrapU: 1
     wrapV: 1
@@ -92,13 +92,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu_tlo2_0
+      name: papier_item_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 11
-        width: 833
-        height: 823
+        x: 23
+        y: 32
+        width: 929
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
