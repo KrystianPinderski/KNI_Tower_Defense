@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd2785ba6584d468815d84c4438f22, type: 3}
   m_Name: Tower14
   m_EditorClassIdentifier: 
-  name: GlassTower
-  icon: {fileID: 21300000, guid: 3c8964e75468a2347a109713adadc979, type: 3}
+  name: GreenProTower
+  icon: {fileID: 21300000, guid: 7f2184a6997109d4aa9ecafe66695a43, type: 3}
   IsItemUse: 0
   description: 
-  prafabToBuild: {fileID: 1478069357984020, guid: b631664e718eadf42b61e0f0ee686255,
+  prafabToBuild: {fileID: 1745825234528840, guid: e3407e1455b5e0c48b2a5a7ac25936ef,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}

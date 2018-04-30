@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd2785ba6584d468815d84c4438f22, type: 3}
   m_Name: Tower12
   m_EditorClassIdentifier: 
-  name: CurseTower
-  icon: {fileID: 21300000, guid: 013d673096b061341bc1686e8c531ed3, type: 3}
+  name: WoodProTower
+  icon: {fileID: 21300000, guid: 39ed24d1d2ac29542bc47b544bc9b68b, type: 3}
   IsItemUse: 0
   description: 
-  prafabToBuild: {fileID: 1478069357984020, guid: b631664e718eadf42b61e0f0ee686255,
+  prafabToBuild: {fileID: 1176029560150446, guid: ade04713c3e19e64fa40fec7196759a9,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}

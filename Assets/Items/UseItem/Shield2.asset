@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Shield2
   m_EditorClassIdentifier: 
   name: Shield2
-  icon: {fileID: 21300000, guid: 4c8daa4a6c4f1a74bb9534727fd32126, type: 3}
+  icon: {fileID: 21300000, guid: aa27be5fdfcf2144585ab0e882ebf2d6, type: 3}
   IsItemUse: 1
   description: 'Add +2 Shield - Money: -3'

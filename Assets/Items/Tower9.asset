@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd2785ba6584d468815d84c4438f22, type: 3}
   m_Name: Tower9
   m_EditorClassIdentifier: 
-  name: LightTower
-  icon: {fileID: 21300000, guid: 26bfc5504b2017b459b244c5594a110e, type: 3}
+  name: IceTower
+  icon: {fileID: 21300000, guid: 227829c7075121a4680d5262ed595db3, type: 3}
   IsItemUse: 0
   description: 
-  prafabToBuild: {fileID: 1478069357984020, guid: b631664e718eadf42b61e0f0ee686255,
+  prafabToBuild: {fileID: 1981304477884618, guid: a08f75150ad77f04691ccab4f04db349,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}

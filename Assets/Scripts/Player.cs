@@ -141,6 +141,11 @@ public class Player : Character {
         ApplyGravity();
         GetInput();
 
+        if(MyHealth<=0)
+        {
+            SceneManager.LoadScene(0);
+        }
+
         if (CanAttack == true)
         Move(moveLR,moveTB);
        

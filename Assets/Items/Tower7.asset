@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd2785ba6584d468815d84c4438f22, type: 3}
   m_Name: Tower7
   m_EditorClassIdentifier: 
-  name: DoubleTower
-  icon: {fileID: 21300000, guid: eb2138506e7b9a343a70b3957125880a, type: 3}
+  name: CannonTower
+  icon: {fileID: 21300000, guid: 2af9de1119df99243948823213883007, type: 3}
   IsItemUse: 0
   description: 
-  prafabToBuild: {fileID: 1478069357984020, guid: b631664e718eadf42b61e0f0ee686255,
+  prafabToBuild: {fileID: 1286976409730292, guid: 1f9d3343b3cac4d41a5a15dd827ffafb,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}

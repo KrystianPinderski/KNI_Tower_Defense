@@ -538,7 +538,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454509903551940}
-  m_Mesh: {fileID: 4300004, guid: f9ee9217346d302408ac9f1862a8779d, type: 3}
+  m_Mesh: {fileID: 4300006, guid: 5ce4403ec0d477442b49e37a912a2b52, type: 3}
 --- !u!33 &33290235084326710
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -623,10 +623,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameItem: TOWER STROM
-  gold: 2
+  gold: 4
   silver: 1
-  bronze: 1
-  money: 0
+  bronze: 2
+  money: 4
   bulidTime: 1
   myRange: {fileID: 114479736162427448}
   gunoBject: {fileID: 1314629721837028}
@@ -656,7 +656,7 @@ MonoBehaviour:
   timeAttack: 1
   gunObjectTower: {fileID: 0}
   scathe: {fileID: 1033158764453320, guid: 062c68df0be7e1f4fba09c5b41d5d23a, type: 2}
-  damge: 3
+  damge: 5
 --- !u!135 &135211514327256888
 SphereCollider:
   m_ObjectHideFlags: 1

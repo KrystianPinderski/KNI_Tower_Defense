@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd2785ba6584d468815d84c4438f22, type: 3}
   m_Name: Tower4
   m_EditorClassIdentifier: 
-  name: GrassTower
-  icon: {fileID: 21300000, guid: 908cc1b894ce191498111395731bfbdd, type: 3}
+  name: FireProTower
+  icon: {fileID: 21300000, guid: 5e7852486fee2b64492ee4c18e442344, type: 3}
   IsItemUse: 0
   description: 
-  prafabToBuild: {fileID: 1759272960999430, guid: a218020c31c7f9f48b27a189e4dcdacc,
+  prafabToBuild: {fileID: 1478069357984020, guid: c7bc63bc4222127439bea78c32777108,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}

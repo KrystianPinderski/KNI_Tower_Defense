@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Gun4
   m_EditorClassIdentifier: 
   name: Gun4
-  icon: {fileID: 21300000, guid: 98d0e0e61206cc942952a9216c270909, type: 3}
+  icon: {fileID: 21300000, guid: 134d50038c143f14ea5c5ed8ed2b785c, type: 3}
   IsItemUse: 1
   description: 'Add +4 Gun - Money: -5'

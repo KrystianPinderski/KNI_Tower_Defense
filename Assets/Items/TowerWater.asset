@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Name: TowerWater
   m_EditorClassIdentifier: 
   name: WaterTower
-  icon: {fileID: 21300000, guid: 81b4aa7aae014d147824ae6e24321901, type: 3}
+  icon: {fileID: 21300000, guid: 965736a95c3a7fe49902e0b999562b79, type: 3}
+  IsItemUse: 0
+  description: 
   prafabToBuild: {fileID: 1759272960999430, guid: a218020c31c7f9f48b27a189e4dcdacc,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}

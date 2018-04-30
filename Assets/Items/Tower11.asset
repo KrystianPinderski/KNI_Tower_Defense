@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd2785ba6584d468815d84c4438f22, type: 3}
   m_Name: Tower11
   m_EditorClassIdentifier: 
-  name: PoisonTower
-  icon: {fileID: 21300000, guid: 09e08a5f809c2ca4bbc7eff774cece89, type: 3}
+  name: WoodTower
+  icon: {fileID: 21300000, guid: e3e155cc0669ccb48a921865de16b173, type: 3}
   IsItemUse: 0
   description: 
-  prafabToBuild: {fileID: 1478069357984020, guid: b631664e718eadf42b61e0f0ee686255,
+  prafabToBuild: {fileID: 1379208937279234, guid: 0b0af43c6b4f44a4c9baae1311bbf6d1,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Health4
   m_EditorClassIdentifier: 
   name: Health4
-  icon: {fileID: 21300000, guid: 287ff2fb04f4b9a43b4417f5a64b8c41, type: 3}
+  icon: {fileID: 21300000, guid: 16783553fa2ae5945a66d13babd1baad, type: 3}
   IsItemUse: 1
   description: 'Add +4 Health - Money: -5'

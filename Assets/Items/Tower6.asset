@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd2785ba6584d468815d84c4438f22, type: 3}
   m_Name: Tower6
   m_EditorClassIdentifier: 
-  name: FastTower
-  icon: {fileID: 21300000, guid: 563c66f88b65eb44cb6cf50a66967439, type: 3}
+  name: StormProTower
+  icon: {fileID: 21300000, guid: a0b2a63b057e35749889de477dbf49be, type: 3}
   IsItemUse: 0
   description: 
-  prafabToBuild: {fileID: 1478069357984020, guid: b631664e718eadf42b61e0f0ee686255,
+  prafabToBuild: {fileID: 1844314069219438, guid: e8ae7e288a36ec94da7ff2ecf81e1d00,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}

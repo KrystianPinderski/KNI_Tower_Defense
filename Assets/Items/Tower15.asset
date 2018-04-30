@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd2785ba6584d468815d84c4438f22, type: 3}
   m_Name: Tower15
   m_EditorClassIdentifier: 
-  name: WoodenTower
-  icon: {fileID: 21300000, guid: 57125789d444faa48b9afda2a5163f13, type: 3}
+  name: GlassTower
+  icon: {fileID: 21300000, guid: 4273fd6151a4bea449e1e7ff6599129e, type: 3}
   IsItemUse: 0
   description: 
-  prafabToBuild: {fileID: 1478069357984020, guid: b631664e718eadf42b61e0f0ee686255,
+  prafabToBuild: {fileID: 1840872106653156, guid: b76fe6b1ea700ad448c415a3049bb3bc,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Shoe4
   m_EditorClassIdentifier: 
   name: Shoe2
-  icon: {fileID: 21300000, guid: 2e1c917e0de979e4faaa3909f3f5c477, type: 3}
+  icon: {fileID: 21300000, guid: 7b3e37f2b638c8046abbc747d714f47e, type: 3}
   IsItemUse: 1
   description: 'Add +4 to run - Money: -5'

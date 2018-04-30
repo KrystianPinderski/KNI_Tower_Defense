@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cd2785ba6584d468815d84c4438f22, type: 3}
   m_Name: Tower13
   m_EditorClassIdentifier: 
-  name: DarkTower
-  icon: {fileID: 21300000, guid: 2e1f686c6a34e904599f8d69f3a04b73, type: 3}
+  name: GreenTower
+  icon: {fileID: 21300000, guid: d3a187e85d6d1044f8a039d21d4f3bc9, type: 3}
   IsItemUse: 0
   description: 
-  prafabToBuild: {fileID: 1478069357984020, guid: b631664e718eadf42b61e0f0ee686255,
+  prafabToBuild: {fileID: 1313124524617396, guid: 5835e2bd5f2e50c44af5cdff2cb072f0,
     type: 2}
   buildModel: {fileID: 1975458856597360, guid: eaa3eb4cdfaa8044480f6e15632702e2, type: 2}
