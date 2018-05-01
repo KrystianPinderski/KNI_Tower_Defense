@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8a074fa6ce7c011488a14f9c0b72bd92
+timeCreated: 1525210597
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Unlimited Toppings Script
+  fontNames:
+  - Unlimited Toppings Script
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

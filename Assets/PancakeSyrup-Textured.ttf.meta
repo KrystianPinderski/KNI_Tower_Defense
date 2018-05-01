@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7441f71b49591394081a037aea0b5bf7
+timeCreated: 1525212466
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Pancake Syrup  Textured
+  fontNames:
+  - Pancake Syrup  Textured
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
